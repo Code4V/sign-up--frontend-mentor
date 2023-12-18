@@ -24,12 +24,15 @@ const config = {
         open: true,
         host: 'localhost',
         watchFiles: {
-            paths: ['src/**/*.*'],
+            paths: ['src/**/*.*', 'src/sass/**/*.*'],
         }
     },
     plugins: [
         new PugPlugin({
             pretty: true,
+            css: {
+                filename: 'assets/css/[name].[contenthash:8].css'
+            }
         })
 
         // Add your plugins here
@@ -47,7 +50,7 @@ const config = {
             },
             {
                 test: /\.s[ac]ss$/i,
-                use: [stylesHandler, 'css-loader', 'sass-loader'],
+                use: ['css-loader', 'sass-loader'],
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,

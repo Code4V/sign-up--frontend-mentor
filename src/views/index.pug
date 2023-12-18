@@ -4,31 +4,32 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title News 
+    link(rel="stylesheet", href=require('./../sass/index.sass'))
     script(src=require('./../index.js')) 
   body
-    | Stay updated!
+    h1 Stay updated!
 
-    | Join 60,000+ product managers receiving monthly updates on:
+    p Join 60,000+ product managers receiving monthly updates on:
 
-    | Product discovery and building what matters
-    | Measuring to ensure updates are a success
-    | And much more!
+    ul
+      li Product discovery and building what matters
+      li Measuring to ensure updates are a success
+      li And much more!
 
-    | Email address
-    | email@company.com
+    label(for="email") Email address
+    input(type="email", name="email", placeholder="email@company.com") 
 
-    | Subscribe to monthly newsletter
+    button Subscribe to monthly newsletter
 
     | <!-- Sign-up form end -->
 
     | <!-- Success message start -->
 
-    | Thanks for subscribing!
+    h2 Thanks for subscribing!
 
-    | A confirmation email has been sent to ash@loremcompany.com. 
-    | Please open it and click the button inside to confirm your subscription.
+    p A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.
 
-    | Dismiss message
+    button Dismiss message
 
     .attribution Challenge by 
       a(href="https://www.frontendmentor.io?ref=challenge", target="_blank") Frontend Mentor
