@@ -7,20 +7,21 @@ html(lang="en")
     link(rel="stylesheet", href=require('./../sass/index.sass'))
     script(src=require('./../index.js')) 
   body
-    h1 Stay updated!
-
-    p Join 60,000+ product managers receiving monthly updates on:
-
-    ul
-      li Product discovery and building what matters
-      li Measuring to ensure updates are a success
-      li And much more!
-
-    label(for="email") Email address
-    input(type="email", name="email", placeholder="email@company.com") 
-
-    button Subscribe to monthly newsletter
-
+    main.newsletter
+      section.newsletter__info 
+        h1 Stay updated!
+        p Join 60,000+ product managers receiving monthly updates on:
+        ul
+          li Product discovery and building what matters
+          li Measuring to ensure updates are a success
+          li And much more!
+        label(for="email") Email address
+        input(type="email", name="email", placeholder="email@company.com")
+        button Subscribe to monthly newsletter
+      section.newsletter__image
+        picture 
+          source(media="(min-width: 768px)", srcset=require('./../assets/images/illustration-sign-up-desktop.svg'))
+          img(src=require('./../assets/images/illustration-sign-up-mobile.svg'), alt="newsletter image")
     | <!-- Sign-up form end -->
 
     | <!-- Success message start -->
