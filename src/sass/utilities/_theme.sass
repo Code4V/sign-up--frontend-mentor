@@ -1,13 +1,44 @@
+@use './../abstract' as *
+  
 h1, 
 h2
   font-family: 'Roboto Bold'
   font-size: 2rem
+
+input, button
+  display: block
+  width: 100%
+  padding: 1.15rem .75rem
+  border-radius: .5rem
+  border: 1px solid
+
+input
+  padding-inline-start: 1.5rem
+  font-size: 1rem
+  border: 1px $grey solid
+
+  &::placeholder
+    font-family: 'Roboto'
+
+button
+  padding: 1.15rem 1.25rem
+  font-size: 1rem
+  font-family: 'Roboto Bold'
+  background-color: $slate
+
+a:link
+  color: white
+  text-decoration: none
+  
+  
 
 .desktop
   display: none
 
 .mobile
   display: block
+
+
 
 
 @media (min-width: 768px) 

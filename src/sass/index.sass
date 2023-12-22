@@ -2,9 +2,13 @@
 @use './utilities' as *
 @use './components' as *
 
+*, 
+*::after,
+*::before
+  box-sizing: border-box
+  
 :root 
   font-family: 'Roboto'
-  box-sizing: border-box
 
 body
   background-color: $charcoal
