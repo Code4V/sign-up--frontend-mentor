@@ -5,7 +5,9 @@ h2
   font-family: 'Roboto Bold'
   font-size: 2rem
 
-input, button
+input, button,
+button::after,
+button::before
   display: block
   width: 100%
   padding: 1.15rem .75rem
@@ -16,6 +18,7 @@ input
   padding-inline-start: 1.5rem
   font-size: 1rem
   border: 1px $grey solid
+  color: $slate
 
   &::placeholder
     font-family: 'Roboto'
@@ -23,12 +26,38 @@ input
 button
   padding: 1.15rem 1.25rem
   font-size: 1rem
-  font-family: 'Roboto Bold'
   background-color: $slate
+  cursor: pointer
+  border: 0
+  position: relative
+  z-index: 1
+  font-family: 'Roboto Bold'
 
-a:link
-  color: white
-  text-decoration: none
+  &::after
+    content: 'Subscribe to monthly newsletter'
+    color: $white
+    vertical-align: middle
+    inset: 0
+    position: absolute
+    height: 100%
+    transition: 250ms ease-in
+    border: 0
+
+    opacity: 0
+    background-image: linear-gradient(to right, $gradient-pink, $tomato)
+    box-shadow: 0 1rem 2.75rem .5px $tomato-op-25
+    z-index: 0
+
+  &:hover::after
+    opacity: 1
+    // border: 0
+
+a
+  &:link,
+  &:visited
+    color: white
+    text-decoration: none
+
   
   
 
